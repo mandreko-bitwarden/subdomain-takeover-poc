@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subdomain Takeover POC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            max-width: 600px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        
+        .badge {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .info-box h2 {
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.9em;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge">Proof of Concept</div>
+        <h1>🎯 Subdomain Takeover POC</h1>
+        <p>This is a test landing page demonstrating GitHub Pages hosting for subdomain takeover testing.</p>
+        
+        <div class="info-box">
+            <h2>What is this?</h2>
+            <p>This page serves as a proof-of-concept for subdomain takeover scenarios. It demonstrates that a GitHub Pages site can be successfully configured and hosted at this domain.</p>
+        </div>
+        
+        <div class="info-box">
+            <h2>Security Note</h2>
+            <p>Subdomain takeovers occur when a subdomain (e.g., <code>subdomain.example.com</code>) points to a service that is no longer in use. This allows an attacker to claim the subdomain and host content.</p>
+        </div>
+        
+        <div class="footer">
+            Hosted on GitHub Pages | <a href="https://github.com" style="color: #667eea; text-decoration: none;">GitHub</a>
+        </div>
+    </div>
+</body>
+</html>
