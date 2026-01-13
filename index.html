@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subdomain Takeover - Proof of Concept</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        .warning-icon {
+            text-align: center;
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #e74c3c;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .message {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+
+        .message p {
+            color: #856404;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .message p:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-section {
+            margin-top: 30px;
+        }
+
+        .info-section h2 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .info-section p {
+            color: #34495e;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .info-section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .info-section li {
+            color: #34495e;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            text-align: center;
+            color: #95a5a6;
+            font-size: 0.9em;
+        }
+
+        .code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #e74c3c;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="warning-icon">⚠️</div>
+        <h1>Subdomain Takeover Detected</h1>
+        <p class="subtitle">Security Vulnerability Demonstration</p>
+
+        <div class="message">
+            <p><strong>This subdomain has been claimed as a proof of concept.</strong></p>
+            <p>If you are seeing this page, it means this subdomain was vulnerable to takeover and has been successfully claimed to demonstrate the security risk.</p>
+        </div>
+
+        <div class="info-section">
+            <h2>What is Subdomain Takeover?</h2>
+            <p>
+                Subdomain takeover is a security vulnerability that occurs when a subdomain (e.g., <span class="code">blog.example.com</span>) 
+                points to an external service (like GitHub Pages, AWS S3, or other cloud services) that is no longer in use or has been 
+                improperly configured.
+            </p>
+            <p>
+                An attacker can claim the unconfigured resource and serve malicious content on the legitimate subdomain, potentially:
+            </p>
+            <ul>
+                <li>Hosting phishing pages that appear to come from the legitimate domain</li>
+                <li>Distributing malware under a trusted domain name</li>
+                <li>Damaging the organization's reputation</li>
+                <li>Stealing cookies and sensitive information from users</li>
+                <li>Bypassing security controls that trust the parent domain</li>
+            </ul>
+        </div>
+
+        <div class="info-section">
+            <h2>How to Prevent Subdomain Takeover</h2>
+            <ul>
+                <li>Regularly audit DNS records and remove entries pointing to decommissioned services</li>
+                <li>Monitor for dangling DNS records that point to unclaimed resources</li>
+                <li>Verify ownership of external services before creating DNS records</li>
+                <li>Use tools to scan for subdomain takeover vulnerabilities</li>
+                <li>Implement proper change management when decommissioning services</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>This is a proof of concept demonstration for educational purposes.</p>
+            <p>Subdomain Takeover POC - GitHub Pages</p>
+        </div>
+    </div>
+</body>
+</html>
